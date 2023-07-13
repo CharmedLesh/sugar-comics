@@ -1,0 +1,71 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #7c3aed;
+    font-weight: 600;
+    padding: 0px 24px;
+    opacity: 95%;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        .logo-top {
+            font-family: RemachineScript;
+            font-weight: 200;
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .logo-bottom {
+            position: absolute;
+            bottom: 4px;
+            font-family: CoreCircus;
+            font-size: 10px;
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+
+        .navigation-button {
+            cursor: pointer;
+        }
+
+        .navigation-splitter {
+            margin: 0px 12px;
+            border: none;
+            width: 1px;
+            height: 30px;
+            background-color: #7c3aed;
+        }
+    }
+
+    .auth-buttons-container {
+        .auth-button {
+            font-family: Nunito-bold;
+            font-size: 14px;
+            cursor: pointer;
+            color: #7c3aed;
+        }
+
+        .sign-in-button {
+            margin-right: 24px;
+        }
+    }
+}
