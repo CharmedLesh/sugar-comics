@@ -1,3 +1,34 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    font-size: 14px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-underline {
+    position: relative;
+    font-size: 14px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #7c3aed;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
 .toolbar {
     position: absolute;
     top: 0;
@@ -8,7 +39,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    color: #7c3aed;
     font-weight: 600;
     padding: 0px 24px;
     opacity: 95%;
@@ -19,6 +49,7 @@
         align-items: center;
         position: relative;
         cursor: pointer;
+        color: #7c3aed;
 
         .logo-top {
             font-family: RemachineScript;
@@ -44,7 +75,9 @@
         align-items: center;
 
         .navigation-button {
+            font-family: Nunito-bold;
             cursor: pointer;
+            color: #7c3aed;
         }
 
         .navigation-splitter {
@@ -59,7 +92,6 @@
     .auth-buttons-container {
         .auth-button {
             font-family: Nunito-bold;
-            font-size: 14px;
             cursor: pointer;
             color: #7c3aed;
         }
@@ -67,5 +99,65 @@
         .sign-in-button {
             margin-right: 24px;
         }
+    }
+}
+
+.main {
+    display: flex;
+    margin: 120px auto 0px;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        min-height: calc(100vh - 274.4px);
+        width: 100%;
+        background-color: white;
+        margin-bottom: 60px;
+        border-radius: 4px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 100vw;
+        align-items: center;
+        opacity: 95%;
+    }
+
+    .footer-top-container {
+        width: 100%;
+        border-bottom: 1px solid #d9d9d9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 0px;
+
+        .circle-link {
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            margin: 8px;
+            outline: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 3px #5e5e5e;
+            transition: 300ms ease-out;
+
+            &:hover {
+                transform: translate3d(0, -3px, 0);
+                box-shadow: 0px 3px 5px #5e5e5e;
+            }
+        }
+    }
+
+    .footer-bottom-container {
+        color: #5e5e5e;
+        padding: 8px 0px;
+        font-size: 10px;
+        font-family: Nunito;
     }
 }
