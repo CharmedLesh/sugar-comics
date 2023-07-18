@@ -194,7 +194,8 @@
         flex-direction: column;
         background-color: white;
         top: 60px;
-        right: -200px;
+        right: -205px;
+        width: 200px;
         box-shadow: -5px 0px #7c3aed;
         transition: transform 300ms ease-in-out;
 
@@ -203,13 +204,31 @@
             cursor: pointer;
             color: #7c3aed;
             font-size: 18px;
-            padding: 20px 60px;
+            padding: 20px 0px;
             box-shadow: 0px 2px #d9d9d9;
+        }
+
+        .hamburger-menu-membrane {
+            width: calc(100vw + 5px);
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            left: calc(-100vw - 5px);
+            visibility: hidden;
+            opacity: 0%;
+            transition: visibility 0s ease-in-out 300ms,
+                opacity 300ms ease-in-out;
         }
 
         &.hamburger-menu-open {
             transition: transform 300ms ease-in-out;
-            transform: translate(-200px);
+            transform: translate(-205px);
+
+            .hamburger-menu-membrane {
+                visibility: visible;
+                transition: opacity 300ms ease-in-out;
+                opacity: 30%;
+            }
         }
     }
 }
