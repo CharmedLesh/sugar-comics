@@ -30,7 +30,10 @@
             <div class="icon-right"></div>
         </div>
     </button>
-    <div class="hamburger-menu">
+    <div
+        class="hamburger-menu"
+        [ngClass]="isHamburgerMenuOpen ? 'hamburger-menu-open' : ''"
+    >
         <button class="hamburger-menu-item first-hamburger-menu-item">
             Explore
         </button>

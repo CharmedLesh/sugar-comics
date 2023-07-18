@@ -194,8 +194,9 @@
         flex-direction: column;
         background-color: white;
         top: 60px;
-        right: 0px;
+        right: -200px;
         box-shadow: -5px 0px #7c3aed;
+        transition: transform 300ms ease-in-out;
 
         .hamburger-menu-item {
             font-family: Nunito-bold;
@@ -204,6 +205,11 @@
             font-size: 18px;
             padding: 20px 60px;
             box-shadow: 0px 2px #d9d9d9;
+        }
+
+        &.hamburger-menu-open {
+            transition: transform 300ms ease-in-out;
+            transform: translate(-200px);
         }
     }
 }
