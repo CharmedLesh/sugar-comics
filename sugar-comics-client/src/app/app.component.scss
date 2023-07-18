@@ -330,14 +330,18 @@
                 font-family: Nunito-bold;
                 cursor: pointer;
                 color: #7c3aed;
-            }
 
-            .sign-in-button {
-                margin-right: 24px;
+                &:nth-child(1) {
+                    margin-right: 24px;
+                }
             }
         }
 
         .hamburger-menu-button-container {
+            display: none;
+        }
+
+        .hamburger-menu {
             display: none;
         }
     }

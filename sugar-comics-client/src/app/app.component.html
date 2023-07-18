@@ -10,12 +10,8 @@
         <button class="navigation-button btn-underline">Submit</button>
     </div>
     <div class="auth-buttons-container">
-        <button class="auth-button sign-in-button btn-underline">
-            Sign In
-        </button>
-        <button class="auth-button sign-up-button btn-underline">
-            Sign Up
-        </button>
+        <button class="auth-button btn-underline">Sign In</button>
+        <button class="auth-button btn-underline">Sign Up</button>
     </div>
     <button
         class="hamburger-menu-button-container"
@@ -38,7 +34,10 @@
             Explore
         </button>
         <button class="hamburger-menu-item">Submit</button>
-        <div class="hamburger-menu-membrane"></div>
+        <div
+            class="hamburger-menu-membrane"
+            (click)="hamburgerMenuClick()"
+        ></div>
     </div>
 </div>
 
