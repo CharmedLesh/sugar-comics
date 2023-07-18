@@ -17,21 +17,25 @@
             Sign Up
         </button>
     </div>
-    <button class="menu-hamburger">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#7c3aed"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
+    <button
+        class="hamburger-menu-button-container"
+        (click)="hamburgerMenuClick()"
+    >
+        <div
+            class="hamburger-menu-button"
+            data-menu="1"
+            [ngClass]="isHamburgerMenuOpen ? 'open' : ''"
         >
-            <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-        </svg>
+            <div class="icon-left"></div>
+            <div class="icon-right"></div>
+        </div>
     </button>
+    <div class="hamburger-menu">
+        <button class="hamburger-menu-item first-hamburger-menu-item">
+            Explore
+        </button>
+        <button class="hamburger-menu-item">Submit</button>
+    </div>
 </div>
 
 <div class="main" role="main">
@@ -43,7 +47,7 @@
         <div class="footer-top-container">
             <a
                 class="circle-link"
-                title="Github"
+                title="GitHub"
                 href="https://github.com/CharmedLesh"
                 target="_blank"
                 rel="author external nofollow noopener"

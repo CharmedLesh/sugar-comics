@@ -38,10 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
     font-weight: 600;
     padding: 0px 24px;
-    opacity: 95%;
+    background: rgba(255, 255, 255, 0.95);
 
     .logo {
         display: flex;
@@ -74,8 +73,138 @@
         display: none;
     }
 
-    .menu-hamburger {
+    .hamburger-menu-button-container {
         display: flex;
+        cursor: pointer;
+        z-index: 2;
+
+        .hamburger-menu-button {
+            width: 30px;
+            height: 20px;
+            transition-duration: 300ms;
+            position: relative;
+
+            .icon-left {
+                transition-duration: 300ms;
+                position: absolute;
+                height: 2px;
+                width: 15px;
+                top: 9px;
+                background-color: #7c3aed;
+                left: 0px;
+                border-radius: 2px 0px 0px 2px;
+
+                &::before {
+                    transition-duration: 300ms;
+                    position: absolute;
+                    width: 15px;
+                    height: 2px;
+                    background-color: #7c3aed;
+                    content: "";
+                    top: -9px;
+                    left: 0px;
+                    border-radius: 2px 0px 0px 2px;
+                }
+
+                &::after {
+                    transition-duration: 300ms;
+                    position: absolute;
+                    width: 15px;
+                    height: 2px;
+                    background-color: #7c3aed;
+                    content: "";
+                    top: 9px;
+                    left: 0px;
+                    border-radius: 2px 0px 0px 2px;
+                }
+            }
+
+            .icon-right {
+                transition-duration: 300ms;
+                position: absolute;
+                height: 2px;
+                width: 15px;
+                top: 9px;
+                background-color: #7c3aed;
+                right: 0px;
+                border-radius: 0px 2px 2px 0px;
+
+                &::before {
+                    transition-duration: 300ms;
+                    position: absolute;
+                    width: 15px;
+                    height: 2px;
+                    background-color: #7c3aed;
+                    content: "";
+                    top: -9px;
+                    right: 0px;
+                    border-radius: 0px 2px 2px 0px;
+                }
+
+                &::after {
+                    transition-duration: 300ms;
+                    position: absolute;
+                    width: 15px;
+                    height: 2px;
+                    background-color: #7c3aed;
+                    content: "";
+                    top: 9px;
+                    left: 0px;
+                    border-radius: 0px 2px 2px 0px;
+                }
+            }
+
+            &.open .icon-left {
+                transition-duration: 300ms;
+                background: transparent;
+
+                &::before {
+                    transform: rotateZ(45deg) scaleX(1.2)
+                        translate3d(3px, 1px, 0px);
+                }
+
+                &::after {
+                    transform: rotateZ(-45deg) scaleX(1.2)
+                        translate3d(3px, -1px, 0px);
+                }
+            }
+
+            &.open .icon-right {
+                transition-duration: 300ms;
+                background: transparent;
+
+                &::before {
+                    transform: rotateZ(-45deg) scaleX(1.2)
+                        translate3d(-3px, 1px, 0px);
+                }
+
+                &::after {
+                    transform: rotateZ(45deg) scaleX(1.2)
+                        translate3d(-3px, -1px, 0px);
+                }
+            }
+        }
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        z-index: 1;
+        height: calc(100vh - 154.4px);
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        top: 60px;
+        right: 0px;
+        box-shadow: -5px 0px #7c3aed;
+
+        .hamburger-menu-item {
+            font-family: Nunito-bold;
+            cursor: pointer;
+            color: #7c3aed;
+            font-size: 18px;
+            padding: 20px 60px;
+            box-shadow: 0px 2px #d9d9d9;
+        }
     }
 }
 
@@ -128,6 +257,11 @@
                 transform: translate3d(0, -3px, 0);
                 box-shadow: 0px 3px 5px #5e5e5e;
             }
+
+            &:active {
+                transition: 300ms linear;
+                transform: translate3d(0, -1px, 0);
+            }
         }
     }
 
@@ -178,7 +312,7 @@
             }
         }
 
-        .menu-hamburger {
+        .hamburger-menu-button-container {
             display: none;
         }
     }
