@@ -10,7 +10,7 @@
 - [References](#references)
 - [Author Info](#author-info)
 
-[Back To The Top](#sugar-comics)
+[Back To The Top](#sugarcomics)
 
 ---
 
@@ -37,7 +37,7 @@ Admin: <p>![0%](https://progress-bar.dev/0/)</p>
 
 > Documentation will be improved as the application develops.
 
-[Back To The Top](#sugar-comics)
+[Back To The Top](#sugarcomics)
 
 ---
 
@@ -55,7 +55,7 @@ Admin: <p>![0%](https://progress-bar.dev/0/)</p>
 
 ### [RabbitMQ](https://www.rabbitmq.com/)
 
-[Back To The Top](#sugar-comics)
+[Back To The Top](#sugarcomics)
 
 ---
 
@@ -63,4 +63,4 @@ Admin: <p>![0%](https://progress-bar.dev/0/)</p>
 
 LinkedIn - [Viacheslav Matvieiev](linkedin.com/in/viacheslav-matvieiev-87a554272)
 
-[Back To The Top](#sugar-comics)
+[Back To The Top](#sugarcomics)
