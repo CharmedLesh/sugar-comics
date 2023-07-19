@@ -5,9 +5,27 @@
         <div class="logo-bottom">Crowdfunding</div>
     </button>
     <div class="navigation">
-        <button class="navigation-button btn-underline">Explore</button>
-        <hr class="navigation-splitter" />
-        <button class="navigation-button btn-underline">Submit</button>
+        <ul class="navigation-list">
+            <li>
+                <a
+                    class="navigation-button btn-underline"
+                    routerLink="/explore"
+                    routerLinkActive="active"
+                    ariaCurrentWhenActive="page"
+                    >Explore</a
+                >
+            </li>
+            <hr class="navigation-splitter" />
+            <li>
+                <a
+                    class="navigation-button btn-underline"
+                    routerLink="/submit"
+                    routerLinkActive="active"
+                    ariaCurrentWhenActive="page"
+                    >Submit</a
+                >
+            </li>
+        </ul>
     </div>
     <div class="auth-buttons-container">
         <button class="auth-button btn-underline">Sign In</button>
@@ -43,7 +61,9 @@
 
 <div class="main" role="main">
     <!-- Page Content -->
-    <div class="content"></div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -130,5 +150,3 @@
         </div>
     </footer>
 </div>
-
-<router-outlet></router-outlet>
