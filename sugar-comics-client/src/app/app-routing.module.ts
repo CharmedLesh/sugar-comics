@@ -8,8 +8,16 @@ import { ErrorComponent } from './pages/error/error.component';
 const routes: Routes = [
     { path: '', redirectTo: 'explore', pathMatch: 'full' },
     { path: 'home', redirectTo: '/explore', pathMatch: 'full' },
-    { path: 'explore', title: 'Explore page', component: ExploreComponent },
-    { path: 'submit', title: 'Submit page', component: SubmitComponent },
+    {
+        path: 'explore',
+        title: 'SugarComics - Explore page',
+        component: ExploreComponent,
+    },
+    {
+        path: 'submit',
+        title: 'SugarComics - Submit page',
+        component: SubmitComponent,
+    },
     { path: '**', title: 'Page not found', component: ErrorComponent },
 ];
 

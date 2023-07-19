@@ -1,6 +1,11 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-    <button class="logo">
+    <button
+        class="logo"
+        routerLink="/explore"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+    >
         <div class="logo-top">SugarComics</div>
         <div class="logo-bottom">Crowdfunding</div>
     </button>
@@ -48,10 +53,24 @@
         class="hamburger-menu"
         [ngClass]="isHamburgerMenuOpen ? 'hamburger-menu-open' : ''"
     >
-        <button class="hamburger-menu-item first-hamburger-menu-item">
+        <button
+            class="hamburger-menu-item first-hamburger-menu-item"
+            routerLink="/explore"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            (click)="hamburgerMenuClick()"
+        >
             Explore
         </button>
-        <button class="hamburger-menu-item">Submit</button>
+        <button
+            class="hamburger-menu-item"
+            routerLink="/submit"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            (click)="hamburgerMenuClick()"
+        >
+            Submit
+        </button>
         <div
             class="hamburger-menu-membrane"
             (click)="hamburgerMenuClick()"
