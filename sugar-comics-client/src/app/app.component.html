@@ -1,3 +1,28 @@
+<div class="auth-modal-wrapper" *ngIf="isSignInModalOpen || isSignUpModalOpen">
+    <div class="auth-modal">
+        <button class="close-auth-mod" (click)="closeAuthModal()">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+            </svg>
+        </button>
+        <div class="sign-in-modal" *ngIf="isSignInModalOpen">
+            sign in modal here
+        </div>
+        <div class="sign-up-modal" *ngIf="isSignUpModalOpen">
+            sign up modal here
+        </div>
+    </div>
+</div>
+
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
     <button
@@ -33,8 +58,12 @@
         </ul>
     </div>
     <div class="auth-buttons-container">
-        <button class="auth-button btn-underline">Sign In</button>
-        <button class="auth-button btn-underline">Sign Up</button>
+        <button class="auth-button btn-underline" (click)="signInModalOpen()">
+            Sign In
+        </button>
+        <button class="auth-button btn-underline" (click)="signUpModalOpen()">
+            Sign Up
+        </button>
     </div>
     <button
         class="hamburger-menu-button-container"

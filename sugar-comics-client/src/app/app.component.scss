@@ -29,6 +29,31 @@
     }
 }
 
+.auth-modal-wrapper {
+    background-color: black;
+    opacity: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .auth-modal {
+        background-color: white;
+        padding: 10px;
+
+        .close-auth-mod {
+            display: flex;
+            cursor: pointer;
+        }
+    }
+}
+
 .toolbar {
     position: absolute;
     top: 0;
